@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+html {background-color:rgba(122, 191, 191, .5)
+;}
+
+body {
+    width:414px;
+    background-color:#F2F2F2;
+    font-family: 'Bebas Neue', cursive;
+margin:0 auto;
+box-sizing:border-box;
+}
+
+    nav {
+        width:414px;
+        background-color:white;
+    display:inline-flex;
+    position:fixed;
+    margin-top:-20px;
+    top:0;
+    z-index:1;
+    }
+
+nav li a {
+    display:block;
+    padding: 20px 15px;
+    margin-bottom:2px;
+    font-family: 'Bebas Neue', cursive;}
+
+nav img {height:50px;}
+
+nav ul {margin:0;
+padding:0;
+list-style:none;
+overflow:hidden;
+max-height:0;
+text-align:center;
+transition:max-height .2s ease-out;
+}
+
+nav h2 {visibility: hidden;}
+
+li a {display:block;
+    padding:15px 15px;
+    text-decoration:none;
+    }
+
+    nav img {visibility:hidden;}
+    
+
+    .hamburger {
+    position: relative;
+    width:100%;
+    right:120px;
+}
+
+.icon-tabler-tools-kitchen {position:absolute;
+    background-color:#EB5428;
+    padding:10px 50px;
+top:5px;
+left:120px;
+margin:10px;
+}
+
+.icon-tabler-user-circle {position:absolute;
+top:40px;
+    right:30px;
+}
+
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+    user-select: none;
+}
+label span {
+    display: block;
+    position: relative;
+    right:115px;
+    bottom:-65px;
+    transition: background-color .2s ease-out;
+}
+label span:before, label span:after {
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: 5px;
+}
+label span:after {
+    top: -5px;
+}
+nav input {
+    display: none;
+}
+input:checked ~ ul {
+    max-height: 500px;
+}
+input:checked ~ label span {
+    background: transparent;
+}
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+
+input,
+label {
+    margin: 0.4rem 0;
+}
+
+
+h1, h2, h3 {font-family: 'Bebas Neue', cursive;
+}
+
+h1 {font-size:40px;
+text-align:center;
+padding-top:150px;
+}
+
+h2 {font-size:30px;}
+
+h3 {font-size:25px;}
+
+p, li, figcaption {font-family: 'Montserrat', sans-serif;
+font-size:16px;
+}
+
+menu {display:flex;
+justify-content:center;
+align-items:center;
+}
+
+menu li {
+    color:#EB5428;
+    font-family: 'Bebas Neue', cursive;
+font-size: 20px;
+list-style:none;
+margin:15px;
+}
+
+.searchbar {display:flex;
+    position:absolute;
+justify-content:center;
+margin-left:auto;
+margin-right:auto;
+left:0;
+right:0;
+top:100px;
+}
+
+.searchbar input {border:2px solid #EB5428;
+background-color:white;
+width:250px;
+height:30px;
+}
+
+button {background-color:#EB5428;
+border-style:none;
+cursor:pointer;
+}
+
+#tacos img {
+    width:100%;
+}
+
+
+    #details {
+        text-align:center;
+        background-color:#F2F2F2;}
+
+#sidedishes {
+    background-color:#7ABFBF;
+padding:15px;
+}
+
+#sidedishes h2 {text-align:center;}
+
+footer {background-color:white;}
+
+footer li {list-style:none;
+    display:inline-flex;
+margin:0;}
+
+footer img {height:100px;}
+
+@media screen and (min-width:768px) {
+
+    body {width:768px;}
+
+    nav {width:768px;
+    height:100px;
+    }
+
+    nav ul {
+        overflow: visible;
+        position:absolute;
+        top: 20px;
+        display: inline-flex;
+        margin-inline:80px;
+    }
+    
+    nav img {visibility:visible;}
+
+    label span, nav input {
+        display: none;
+    }
+
+    .hamburger {visibility:hidden;}
+
+    .icon-tabler-tools-kitchen {
+        padding:10px 5px;
+    height:60px;
+        left:-90px;
+        top:-10px;
+    }
+
+    .icon-tabler-user-circle {
+        top:20px;
+        right:-50px;}
+
+    #tacos menu {display:flex;
+        justify-content:center;
+        align-items:center;
+        background-color:rgba(255,255,255,.5);
+        width:730px;
+    position:absolute;
+    margin-top:-1px;
+    }
+
+    #tacos menu li {margin-right:50px;}
+
+    #sidedishes2 {display:grid;
+        grid-template-columns: 1fr 1fr;}
+}
+
+@media screen and (min-width:1280px) 
+
+{
+    body {width:1280px;}
+
+h1 {padding-top:150px;}
+
+    nav {
+    width:1280px;
+    line-height:50px;
+    top:0;
+    z-index:1;
+    }
+
+    nav ul {
+        overflow: visible;
+        position:absolute;
+        top: 20px;
+        display: inline-flex;
+        padding:5px;
+        margin-inline:80px;
+    }
+
+    nav img {visibility:visible;}
+
+    label span, nav input {
+        display: none;
+    }
+
+    
+
+    .icon-tabler-tools-kitchen {
+        position:absolute;
+        height:60px;
+        top:-10px;
+        left:-90px;
+    }
+
+    .icon-tabler-user-circle {
+        position:absolute;
+        right:-100px;}
+
+    .hamburger {visibility:hidden;}
+
+    #tacos {display:inline-flex;
+    }
+
+    #tacos menu {display:block;
+        padding:20px;
+        border:2px solid #EB5428;
+        background-color:white;
+        position:relative;
+        margin-top:-1px;
+        height:460px;
+        width:40px;
+        }
+
+       #tacos menu li {margin:0;}
+
+#tacos img {width:100%;
+    }
+
+    #tacos p {padding:5px;
+    line-height: 1.5em;
+    }
+
+    #details {
+        color:#7ABFBF;
+        background-color:black;
+        padding: 2px;
+    }
+
+#instructions {display:inline-flex;
+padding: 5px;
+}
+
+.ins {margin-inline:70px;}
+
+    #sidedishes2 {
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    }
+
+    .ingredients {display:inline-flex;}
+
+
+    footer {
+        display:flex;}
+
+
+    footer ul {
+        align-items:right;
+        justify-content:right;
+        
+    }
+}
